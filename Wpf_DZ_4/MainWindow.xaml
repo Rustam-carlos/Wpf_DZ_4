@@ -1,0 +1,30 @@
+﻿<Window x:Class="Wpf_DZ_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_DZ_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="592.193" Width="1092.751">
+    <Grid>
+        <TabControl x:Name="TabControl1" HorizontalAlignment="Left" Height="551" VerticalAlignment="Top" Width="1085" Background="{x:Null}">
+            <TabItem x:Name="TabItem1" Header="Google" Margin="0,-3,-30,1">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FF2AAE1D" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Margin="0,0,-1,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="197*"/>
+                    </Grid.ColumnDefinitions>
+                    <WebBrowser Source="https://www.google.com/" HorizontalAlignment="Left" Height="513" VerticalAlignment="Top" Width="1070" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem2" Header="+" Margin="0,0,-27,1" Foreground="#FFBB4242" HorizontalAlignment="Right" Width="23" PreviewMouseLeftButtonDown="TabItem2_PreviewMouseLeftButtonDown"/>
+        </TabControl>
+
+    </Grid>
+</Window>
